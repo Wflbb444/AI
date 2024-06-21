@@ -63,7 +63,7 @@ python main.py
     ```
 3.在`Anaconda Prompt`中运行以下命令：
 ```
-python main.py
+python main_onnx.py
 ```
 
 4.后续步骤同上。
@@ -95,4 +95,20 @@ pip install cupy-cuda11x
 
 8.将模型导出为引擎
 
+在本项目中，推荐使用yolov5s.pt和yolov5m.pt模型。更多模型可以去[ultralytics官方仓库](https://github.com/ultralytics/yolov5/releases/tag/v7.0)下载。
+运行以下命令导出模型，可能需要十几分钟的时间：
+```
+   python .\export.py --weights ./yolov5s.pt --include engine --half --imgsz 320 320 --device 0
+```
+修改`main_tensorrt.py`的第27行：
+```
+model = DetectMultiBackend('yolov5s.engine(替换为本地引擎的名字)', device=torch.device(
+        'cuda'), dnn=False, data='', fp16=True)
+    stride, names, pt = model.stride, model.names, model.pt
+```
 
+9.在`Anaconda Prompt`中运行以下命令：
+```
+python main_tensorrt.py
+```
+10.后续步骤同上。
