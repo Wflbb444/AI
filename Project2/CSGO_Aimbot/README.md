@@ -93,9 +93,8 @@ pip install cupy-cuda11x
 - `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\libnvvp`
 - `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\bin`
 
-8.将模型导出为引擎
-
-在本项目中，推荐使用yolov5s.pt和yolov5m.pt模型。更多模型可以去[ultralytics官方仓库](https://github.com/ultralytics/yolov5/releases/tag/v7.0)下载。
+8.下载模型并导出为引擎
+在[ultralytics官方仓库](https://github.com/ultralytics/yolov5/releases/tag/v7.0)下载预训练好的模型。在本项目中，推荐使用yolov5s.pt和yolov5m.pt模型。
 运行以下命令导出模型，可能需要十几分钟的时间：
 ```
    python .\export.py --weights ./yolov5s.pt --include engine --half --imgsz 320 320 --device 0
