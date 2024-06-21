@@ -35,7 +35,7 @@ pip install -r requirements.txt
 
 ## 四、三种运行方式
 
-### 1.Pytorch
+### Pytorch
 
 1.以1920x1080的分辨率运行CS2，并在游戏内的`视频设置`/`视频`/`显示模式`中选择`窗口`选项。
 
@@ -50,7 +50,7 @@ python main.py
 4.需要结束的时候，就在命令行里输入`q`关闭程序。
 
 
-### 2.Onnx
+### Onnx
 
 1. 在`config.py` 文件中，根据硬件需求修改`onnxChoice`参数：
     - `onnxChoice = 1` # CPU ONLY
@@ -68,7 +68,7 @@ python main_onnx.py
 
 4.后续步骤同上。
 
-### 3.TensorRT
+### TensorRT
 
 1.安装[CUDA Toolkit 11.8](https://developer.nvidia.com/cuda-11-8-0-download-archive)
 
