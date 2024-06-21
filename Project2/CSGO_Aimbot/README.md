@@ -112,3 +112,17 @@ model = DetectMultiBackend('yolov5s.engine(替换为本地引擎的名字)', dev
 python main_tensorrt.py
 ```
 10.后续步骤同上。
+
+## 五、设置选项
+
+修改 `config.py`以适应需要。 
+
+`screenShotHeight/Width` - 只检测屏幕中央320x320分辨率的区域
+
+`cpsDisplay` - cps代表着Corrections per second，监测鼠标移动速度。理想状况下，如果是fps是60帧，cps也是60帧，意味着鼠标每一帧都在移动。设为False时不在终端显示实时cps数据。
+
+`visuals` - 一个320x320的窗口，始终显示在屏幕最前端，用于显示AI图像识别的过程。如果觉得影响游戏体验，可以设为False。
+
+`aaMovementAmp` - 鼠标移动放大器。数值越低越灵敏，推荐0.5-2，虽然视角会有晃动，但更像人在操作。
+
+`confidence` - 置信度阈值，置信度大于这个值时就将物体识别为人并自动瞄准。
