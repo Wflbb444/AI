@@ -9,9 +9,11 @@ maskWidth = 80
 maskHeight = 200
 
 # Autoaim mouse movement amplifier
-aaMovementAmp = .4
+# 越低越灵敏，推荐0.5-2，虽然有晃动但更像人
+aaMovementAmp = .1
 
 # Person Class Confidence
+# 置信度大于40时就识别为人
 confidence = 0.4
 
 # What key to press to quit and shutdown the autoaim
@@ -33,4 +35,4 @@ centerOfScreen = True
 # 1 - CPU
 # 2 - AMD
 # 3 - NVIDIA
-onnxChoice = 3
+onnxChoice = 1
