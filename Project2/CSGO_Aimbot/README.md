@@ -79,7 +79,7 @@ pip install cupy-cuda11x
 
 3.安装[CUDNN](https://developer.nvidia.com/downloads/compute/cudnn/secure/8.9.6/local_installers/11.x/cudnn-windows-x86_64-8.9.6.50_cuda11-archive.zip/)（需要Nvidia账户）
 
-4.安装[`TensorRT 8.6 GA`](https://developer.nvidia.com/downloads/compute/machine-learning/tensorrt/secure/8.6.1/zip/TensorRT-8.6.1.6.Windows10.x86_64.cuda-11.8.zip).
+4.安装[TensorRT 8.6 GA](https://developer.nvidia.com/downloads/compute/machine-learning/tensorrt/secure/8.6.1/zip/TensorRT-8.6.1.6.Windows10.x86_64.cuda-11.8.zip).
 
 5.将解压后的CUDNN和TensorRT里的文件全都复制到CUDA Toolkit文件夹里，默认路径在`C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8`
 
@@ -94,6 +94,7 @@ pip install cupy-cuda11x
 - `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\bin`
 
 8.下载模型并导出为引擎
+
 在[ultralytics官方仓库](https://github.com/ultralytics/yolov5/releases/tag/v7.0)下载预训练好的模型。在本项目中，推荐使用yolov5s.pt和yolov5m.pt模型。
 运行以下命令导出模型，可能需要十几分钟的时间：
 ```
