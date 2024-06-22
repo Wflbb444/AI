@@ -126,3 +126,8 @@ python main_tensorrt.py
 `aaMovementAmp` - 鼠标移动放大器。数值越低越灵敏，推荐0.5-2，虽然视角会有晃动，但更像人在操作。
 
 `confidence` - 置信度阈值，置信度大于这个值时就将物体识别为人并自动瞄准。
+
+## 六、附加
+
+添加了yolov8_live_overlay.py，需要安装pygame库。
+仅作为目标检测的展示。
